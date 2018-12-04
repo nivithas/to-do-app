@@ -11,7 +11,7 @@ export class TaskManagerComponent implements OnInit {
   myTasks = ['Go get some lassi','Plan a weekend trip','Task 3','Task 4']
   cur = 100
   myDate = new Date()
-  myName = "sdfvghsdkjvh"
+  myName = ["sh","ggf","fx","po"]
   completedTasks =[];
   ngOnInit() {
   }
