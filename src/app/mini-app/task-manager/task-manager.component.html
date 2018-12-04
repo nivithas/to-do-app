@@ -1,0 +1,11 @@
+Task : <input type="text" [(ngModel)]="oneTask">
+<button type="button" (click)="updateTask()">ADD TASK</button>
+<br>
+Pending:
+<ol>
+  <li *ngFor="let t of myTasks; let ct=index">{{ t }}&nbsp;<button type="button" (click)="taskStatus(ct)">Done</button></li>
+</ol>
+Completed:
+<ol>
+  <li *ngFor="let c of completedTasks">{{ c }}</li>
+</ol>
