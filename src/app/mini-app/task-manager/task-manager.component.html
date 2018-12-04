@@ -3,9 +3,16 @@ Task : <input type="text" [(ngModel)]="oneTask">
 <br>
 Pending:
 <ol>
-  <li *ngFor="let t of myTasks; let ct=index">{{ t }}&nbsp;<button type="button" (click)="taskStatus(ct)">Done</button></li>
+  <li *ngFor="let t of myTasks; let ct=index">{{ t | uppercase }}&nbsp;<button type="button" (click)="taskStatus(ct)">Done</button></li>
 </ol>
 Completed:
 <ol>
   <li *ngFor="let c of completedTasks">{{ c }}</li>
 </ol>
+
+CURRENCY PIPE: {{cur | currency:'INR'}}
+<br>
+Date: {{myDate}}<br>
+Date: {{myDate | date}}
+<br>
+name: {{ myName | stringSortPipe}}
