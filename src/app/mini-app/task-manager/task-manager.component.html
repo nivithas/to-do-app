@@ -15,4 +15,6 @@ CURRENCY PIPE: {{cur | currency:'INR'}}
 Date: {{myDate}}<br>
 Date: {{myDate | date}}
 <br>
-name: {{ myName | stringSortPipe}}
+name: {{ myName | stringSortPipe: "dsc"}}
+<br>
+Score: {{score | numberSortPipe}}

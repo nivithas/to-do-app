@@ -12,6 +12,7 @@ export class TaskManagerComponent implements OnInit {
   cur = 100
   myDate = new Date()
   myName = ["sh","ggf","fx","po"]
+  score = [1,45,22,34,2,11,0]
   completedTasks =[];
   ngOnInit() {
   }
