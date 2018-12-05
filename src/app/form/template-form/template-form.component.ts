@@ -1,3 +1,4 @@
+import { RestAPIUsersServiceService } from './../../services/rest-apiusers-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService:RestAPIUsersServiceService) { }
 
   ngOnInit() {
   }
-  addFormUser(val){
-    console.log(val);
-  }
+  // addFormUser(val){
+  //   console.log(val);
+  //   this.userService.createUser(val).subscribe((data)=>{
+  //     console.log(data)
+  //   })
+  // }
 }

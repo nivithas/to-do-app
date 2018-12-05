@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-
+import {ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { GrandParentComponent } from './family/grand-parent/grand-parent.component';
@@ -19,6 +19,7 @@ import { UsersAPIComponentComponent } from './remote/users-apicomponent/users-ap
 import { AutoSearchpipePipe } from './myPipes/auto-searchpipe.pipe';
 import { UserDetailComponentComponent } from './remote/user-detail-component/user-detail-component.component';
 import { TemplateFormComponent } from './form/template-form/template-form.component';
+import { ModelFormComponent } from './form/model-form/model-form.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +36,14 @@ import { TemplateFormComponent } from './form/template-form/template-form.compon
     UsersAPIComponentComponent,
     AutoSearchpipePipe,
     UserDetailComponentComponent,
-    TemplateFormComponent
+    TemplateFormComponent,
+    ModelFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path:'',
@@ -89,6 +92,10 @@ import { TemplateFormComponent } from './form/template-form/template-form.compon
       {
         path:'tempform',
         component: TemplateFormComponent
+      },
+      {
+        path:'modelform',
+        component: ModelFormComponent
       },
        {
         path:'**',
