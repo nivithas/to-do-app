@@ -1,6 +1,9 @@
 <p>
   users-apicomponent works!
 </p>
+Search: <input type="text" [(ngModel)]="searchString">
+<br>
+<br>
 <table border="2">
   <thead>
     <tr>
@@ -10,10 +13,14 @@
       <th>Co-ordinates</th>
     </tr>
   </thead>
-  <tr *ngFor="let c of allUsers">
+  <tr *ngFor="let c of allUsers | autoSearchpipe: searchString">
     <td>{{c.id}}</td>
     <td>{{c.name}}</td>
     <td>{{c.email}}</td>
     <td>{{c.address.geo.lat + c.address.geo.lng}}</td>
+    <td><button type="button"(click)="deleteUser(c.id)">Delete</button></td>
     </tr>
 </table>
+<br>
+<br>
+<button type="button"(click)="postUser()">Create</button>

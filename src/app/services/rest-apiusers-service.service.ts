@@ -11,4 +11,11 @@ export class RestAPIUsersServiceService {
   getRemoteUsers(){
     return this.http.get("http://localhost:3000/users")
   }
+
+  createUser(user){
+    return this.http.post("http://localhost:3000/users", user)
+  }
+  removeUser(indexRec){
+    return this.http.delete("http://localhost:3000/users/" + indexRec)
+  }
 }

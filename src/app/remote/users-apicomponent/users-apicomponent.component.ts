@@ -21,4 +21,32 @@ allUsers:any;
     console.log(this.allUsers)
     })
   }
+  user = {
+    "name":"YUII",
+    "email": "yuvvo@gmail.com",
+    "address": {
+      "geo":{
+        "lat": "11.11",
+        "lng": "12.13"
+      }
+    }
+  }
+
+  postUser(){
+    this.userService.createUser(this.user).subscribe((response)=>{
+      console.log(this.user)
+       this.userService.getRemoteUsers().subscribe((response) => {
+         this.allUsers = response
+       })
+    })
+  }
+  deleteUser(ind){
+    console.log(ind);
+      this.userService.removeUser(ind).subscribe((response1)=>{
+      console.log(response1)
+      this.userService.getRemoteUsers().subscribe((response1) => {
+         this.allUsers = response1
+       })
+    })
+  }
 }
