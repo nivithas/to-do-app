@@ -17,6 +17,7 @@ import { ConsumeLocalService1Component } from './consumeService/consume-local-se
 import { ConsumeLocalService2Component } from './consumeService/consume-local-service2/consume-local-service2.component';
 import { UsersAPIComponentComponent } from './remote/users-apicomponent/users-apicomponent.component';
 import { AutoSearchpipePipe } from './myPipes/auto-searchpipe.pipe';
+import { UserDetailComponentComponent } from './remote/user-detail-component/user-detail-component.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AutoSearchpipePipe } from './myPipes/auto-searchpipe.pipe';
     ConsumeLocalService1Component,
     ConsumeLocalService2Component,
     UsersAPIComponentComponent,
-    AutoSearchpipePipe
+    AutoSearchpipePipe,
+    UserDetailComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +79,10 @@ import { AutoSearchpipePipe } from './myPipes/auto-searchpipe.pipe';
       {
         path:'remoteData',
         component: UsersAPIComponentComponent
+      },
+       {
+        path:'remoteData/:id',
+        component: UserDetailComponentComponent
       },
        {
         path:'**',

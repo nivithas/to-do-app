@@ -19,6 +19,7 @@ Search: <input type="text" [(ngModel)]="searchString">
     <td>{{c.email}}</td>
     <td>{{c.address.geo.lat + c.address.geo.lng}}</td>
     <td><button type="button"(click)="deleteUser(c.id)">Delete</button></td>
+    <td><button type="button"(click)="userDetail(c.id)">Details</button></td>
     </tr>
 </table>
 <br>
