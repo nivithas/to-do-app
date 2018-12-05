@@ -18,6 +18,7 @@ import { ConsumeLocalService2Component } from './consumeService/consume-local-se
 import { UsersAPIComponentComponent } from './remote/users-apicomponent/users-apicomponent.component';
 import { AutoSearchpipePipe } from './myPipes/auto-searchpipe.pipe';
 import { UserDetailComponentComponent } from './remote/user-detail-component/user-detail-component.component';
+import { TemplateFormComponent } from './form/template-form/template-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { UserDetailComponentComponent } from './remote/user-detail-component/use
     ConsumeLocalService2Component,
     UsersAPIComponentComponent,
     AutoSearchpipePipe,
-    UserDetailComponentComponent
+    UserDetailComponentComponent,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule,
@@ -83,6 +85,10 @@ import { UserDetailComponentComponent } from './remote/user-detail-component/use
        {
         path:'remoteData/:id',
         component: UserDetailComponentComponent
+      },
+      {
+        path:'tempform',
+        component: TemplateFormComponent
       },
        {
         path:'**',
