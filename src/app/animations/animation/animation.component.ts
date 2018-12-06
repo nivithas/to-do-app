@@ -8,7 +8,7 @@ import { trigger,state,transition,animate,style } from '@angular/animations';
   animations:[
     trigger("growUpAnimation",[
       state("kid",style({"font-size":"30px","color":"red"})),
-      state("elder",style({"font-size":"80px","color":"green"})),
+      state("elder",style({"font-size":"80px","color":"green","transform":"rotate(360deg)"})),
       transition('kid <=> elder',animate('800ms ease-in'))
     ])
   ]
