@@ -7,7 +7,7 @@ export class LocalService1Service {
 
   friends = ['ol','ko','po']
   returnMyMessage(){
-    return "sdhfisdhfjk";
+    return " SERVICE CREATED";
   }
  firstService(){
    console.log("am a service")

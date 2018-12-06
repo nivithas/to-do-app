@@ -22,6 +22,7 @@ import { UserDetailComponentComponent } from './remote/user-detail-component/use
 import { TemplateFormComponent } from './form/template-form/template-form.component';
 import { ModelFormComponent } from './form/model-form/model-form.component';
 import { AnimationComponent } from './animations/animation/animation.component';
+import { LandingPageComponent } from './landing/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AnimationComponent } from './animations/animation/animation.component';
     UserDetailComponentComponent,
     TemplateFormComponent,
     ModelFormComponent,
-    AnimationComponent
+    AnimationComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -104,6 +106,10 @@ import { AnimationComponent } from './animations/animation/animation.component';
       {
         path:'animation',
         component: AnimationComponent
+      },
+      {
+        path:'landingpage',
+        component: LandingPageComponent
       },
        {
         path:'**',

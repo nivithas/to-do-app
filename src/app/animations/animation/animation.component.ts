@@ -8,7 +8,7 @@ import { trigger,state,transition,animate,style } from '@angular/animations';
   animations:[
     trigger("growUpAnimation",[
       state("kid",style({"font-size":"30px","color":"red"})),
-      state("elder",style({"font-size":"80px","color":"green"})),
+      state("elder",style({"font-size":"80px","color":"green","transform":"rotate(360deg)"})),
       transition('kid <=> elder',animate('800ms ease-in'))
     ])
   ]
@@ -23,7 +23,7 @@ export class AnimationComponent implements OnInit {
   animateNow(){
     this.defaultState = this.defaultState == "elder"?"kid":"elder"
     if(this.defaultState == "kid")
-    this.content = "i wish to grow up"
+    this.content = "i am a kid .i wish to grow up"
     else{
       this.content = "i grew up"
     }
