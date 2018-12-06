@@ -23,6 +23,7 @@ import { TemplateFormComponent } from './form/template-form/template-form.compon
 import { ModelFormComponent } from './form/model-form/model-form.component';
 import { AnimationComponent } from './animations/animation/animation.component';
 import { LandingPageComponent } from './landing/landing-page/landing-page.component';
+import { ProductListComponent } from './plp/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { LandingPageComponent } from './landing/landing-page/landing-page.compon
     TemplateFormComponent,
     ModelFormComponent,
     AnimationComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -110,6 +112,10 @@ import { LandingPageComponent } from './landing/landing-page/landing-page.compon
       {
         path:'landingpage',
         component: LandingPageComponent
+      },
+      {
+        path:'plp',
+        component: ProductListComponent
       },
        {
         path:'**',

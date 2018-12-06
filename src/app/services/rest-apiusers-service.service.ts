@@ -21,4 +21,7 @@ export class RestAPIUsersServiceService {
   getOneUser(id){
     return this.http.get("http://localhost:3000/users/" + id)
   }
+  getRemoteProducts(){
+    return this.http.get("http://localhost:3000/products")
+  }
 }
