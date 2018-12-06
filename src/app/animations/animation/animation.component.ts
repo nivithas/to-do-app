@@ -15,7 +15,7 @@ import { trigger,state,transition,animate,style } from '@angular/animations';
 })
 export class AnimationComponent implements OnInit {
   defaultState:String ="kid";
-  content:String = "i wish to grow up"
+  content:String = "i am a kid .i wish to grow up"
   constructor() { }
 
   ngOnInit() {
